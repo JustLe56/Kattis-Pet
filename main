@@ -1,18 +1,15 @@
+import sys
 # Initialize variable
 winnerLine = 0;
 winningTotal = 0;
 lineNum = 0;
 
-#sys.stdin is array inputed
 for line in sys.stdin:
-# Read input
-	score = line.split();
-lineNum = lineNum + 1;
-# Adds the numbers from one line in score and sets to current total
-curTotal = int(score[0])+int(score[1])+int(score[2])+int(score[3]);
-# Write code here - the if condition 	
-if curTotal > winningTotal:
-  winnerLine = lineNum
-  winningTotal = curTotal
+  score = line.split();
+  lineNum = lineNum + 1;
+  curTotal = int(score[0])+int(score[1])+int(score[2])+int(score[3]);   
+  if curTotal > winningTotal:
+    winnerLine = lineNum
+    winningTotal = curTotal
 
 print (winnerLine, " ", winningTotal);
